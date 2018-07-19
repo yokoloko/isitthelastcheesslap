@@ -214,7 +214,7 @@ img {
       }
 
       function isItsTrikeDayAfterTomorrow() {
-        var tomorrow = new Date(today.getTime() + 2*(24 * 60 * 60 * 1000)).toJSON().slice(0,10);
+        var dayAfterTomorrow = new Date(today.getTime() + 2*(24 * 60 * 60 * 1000)).toJSON().slice(0,10);
         return days.indexOf(dayAfterTomorrow) !== -1;
       }
       

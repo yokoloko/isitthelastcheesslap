@@ -184,6 +184,8 @@ img {
           sheet = 4;
         } else if (isItStrikeYesterday()) {
           sheet = 5;
+        } else if (isItsTrikeDayAfterTomorrow()) {
+          sheet = 7;
         } else {
           sheet = 2;
         }
@@ -211,6 +213,11 @@ img {
         return days.indexOf(tomorrow) !== -1;
       }
 
+      function isItsTrikeDayAfterTomorrow() {
+        var tomorrow = new Date(today.getTime() + 2*(24 * 60 * 60 * 1000)).toJSON().slice(0,10);
+        return days.indexOf(dayAfterTomorrow) !== -1;
+      }
+      
       function addScript( src ) {
         var s = document.createElement( 'script' );
         s.setAttribute( 'src', src );

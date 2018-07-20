@@ -160,7 +160,7 @@ img {
       if (getQueryStringValue("today")) {
         today = new Date(getQueryStringValue("today"))
       }
-
+        
       function getValues(root) {
         var feed = root.feed;
         var entries = feed.entry || [];
@@ -193,7 +193,13 @@ img {
         addScript('https://spreadsheets.google.com/feeds/cells/1fmmt0qCI9Ssht6jNtjBhcJVtN2sEEQQUSXzxKxLcO5M/' + sheet + '/public/values?alt=json-in-script&callback=displayMessage');
       }
 
-      function displayMessage(root) {
+      console.log(days.indexOf(0));
+        function displayMessage(root) {
+        j = '';
+        if(!isItStrikeToday()){
+            jourj = days.indexOf(0);
+            j = 'J-'.date - today.' : '   
+        }
         messages = getValues(root);
         document.getElementById('message').innerHTML = messages[Math.floor(Math.random()*messages.length)];;
         document.getElementById('body').style.display = 'block';

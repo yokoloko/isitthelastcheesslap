@@ -197,20 +197,9 @@ img {
       function displayMessage(root) {
         var j = '';
         if(!isItStrikeToday()){
-            console.log(days.indexOf(1));
-            console.log(getValues(root)[0]);
-            console.log(today);
-            console.log(new Date(getValues(root)[0]));
-            
-            console.log(today);
-            console.log(Math.abs((new Date(getValues(root)[0])) - today));
-            
-            var timeDiff = Math.abs((new Date(getValues(root)[0])) - today);
-            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-            
-            // var jourj = days.indexOf(1);
-            // var countdown = new Date(getValues(root)[0]) - today;
-            j = 'J-'+diffDays+' : ';   
+            var timeDiff = Math.abs(new Date(days[0]) - today);
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            j = 'J-'+diffDays+' : ';
         }
         messages = getValues(root);
         document.getElementById('message').innerHTML = j+messages[Math.floor(Math.random()*messages.length)];;

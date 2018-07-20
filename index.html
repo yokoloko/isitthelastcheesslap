@@ -197,6 +197,9 @@ img {
       function displayMessage(root) {
         var j = '';
         if(!isItStrikeToday()){
+            console.log(days.indexOf(1));
+            console.log(days.indexOf(0));
+            console.log(today);
             var jourj = days.indexOf(1);
             var countdown = jourj - today;
             j = 'J-'+countdown+' : ';   

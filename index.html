@@ -202,8 +202,10 @@ img {
             console.log(today);
             console.log(new Date(getValues(root)[0]));
             
+            console.log(today);
+            console.log(Math.abs((new Date(getValues(root)[0])) - today));
             
-            var timeDiff = Math.abs(new Date(getValues(root)[0]) - today);
+            var timeDiff = Math.abs((new Date(getValues(root)[0])) - today);
             var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
             
             // var jourj = days.indexOf(1);

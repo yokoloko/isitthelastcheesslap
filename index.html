@@ -199,10 +199,10 @@ img {
         if(!isItStrikeToday()){
             var jourj = days.indexOf(0);
             var countdown = jourj - today;
-            j = 'J-'.countdown.' : ';   
+            j = 'J-'+countdown+' : ';   
         }
         messages = getValues(root);
-        document.getElementById('message').innerHTML = j.messages[Math.floor(Math.random()*messages.length)];;
+        document.getElementById('message').innerHTML = j+messages[Math.floor(Math.random()*messages.length)];;
         document.getElementById('body').style.display = 'block';
       }
 

@@ -185,7 +185,7 @@ img {
         } else if (isItStrikeYesterday()) {
           sheet = 5;
         } else if (isItsTrikeDayAfterTomorrow()) {
-          sheet = 7;
+          sheet = 6;
         } else {
           sheet = 2;
         }
@@ -193,7 +193,6 @@ img {
         addScript('https://spreadsheets.google.com/feeds/cells/1fmmt0qCI9Ssht6jNtjBhcJVtN2sEEQQUSXzxKxLcO5M/' + sheet + '/public/values?alt=json-in-script&callback=displayMessage');
       }
 
-      console.log(days.indexOf(0));
       function displayMessage(root) {
         var j = '';
         if(!isItStrikeToday()){
